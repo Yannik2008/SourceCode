@@ -1,9 +1,11 @@
 from colorama import Fore, Back, Style
 import time
+import random
 
 J_N = ["y", "n", "Y", "N"]
 S_F = ["S", "F", "Quit"]
 Y_N =["Y", "N"]
+Wald_zahl = ["10", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 richtung = ["Norden", "Süden", "Osten", "Westen"]
 
 name = input("Wie heißt du tapferer Held: ")
@@ -33,15 +35,41 @@ if Modus == "S":
         time.sleep(7)
         print("Du wachst auf! Deine Augen schmerzen und deine Muskeln sind wie aus Blei. Als du richtig zudir kommst, merkst du, dass du auf einer Wiese gelegen hast.") 
         time.sleep(8)
-        print("Du merkst, das in Richtung", Fore.RED + "Norden", Fore.BLACK + "ein großer Wald beginnt.")
+        print("Du merkst, dass in Richtung", Fore.RED + "Norden", Fore.BLACK + "ein großer Wald beginnt.")
         time.sleep(5)
-        print("In Richung", Fore.RED + "Osten", Fore.BLACK + "schießen Berge in die Höhe.")
+        print("In Richtung", Fore.RED + "Osten", Fore.BLACK + "schießen Berge in die Höhe.")
         time.sleep(5)
         print("Im", Fore.RED + "Süden", Fore.BLACK + "erblickst ein kleines Dorf mit einem Markt und")
         time.sleep(5)
         print("Im", Fore.RED + "Westen", Fore.BLACK + "beginnt ein Ozean.")
-        Erste_Entscheidung = input("Bitte entscheide dich, wohin du gehen möchtest:")
-        #while Erste_Entscheidung not in richtung:
+        Erste_Entscheidung = ""
+        while Erste_Entscheidung not in richtung:
+            Erste_Entscheidung = input("Bitte entscheide dich, wohin du gehen möchtest: ")
+        if Erste_Entscheidung == "Norden":
+            print(Fore.WHITE + "Du begibst dich in die Nähe des Waldes und schaust dich erstmal um.", Fore.RESET)
+            print("Die Baume ragen über dir auf wie Riesen.")
+            time.sleep(1.5)
+            print("Auf einmal ertönt ein lautes Gebrüll!")
+            time.sleep(2)
+            print("Du drehst dich um und erblickst einen wütenden Wolf")
+            time.sleep(2)
+            print("Wie aus dem Nichts attackiert er dich.")
+            time.sleep(1)
+            Wald_GesuchteZahl = random.randint(1, 10)
+            Wald_GesuchteZahl_geraten = ""
+            while Wald_GesuchteZahl_geraten not in Wald_zahl:
+                Wald_GesuchteZahl_geraten = input("Du hast nur eine Chance, errate die gesuchte Zahl von 1 bis 10:")
+                print(Wald_GesuchteZahl)
+            if Wald_GesuchteZahl_geraten == Wald_GesuchteZahl:
+                print("Super gemacht, du hast den Wolf besiegt.") 
+        elif Erste_Entscheidung == "Osten":
+            print("Noch in der Entwicklung")
+        elif Erste_Entscheidung == "Süden":
+            print("Noch in der Entwicklung")
+        elif Erste_Entscheidung == "Westen":
+            print("Noch in der Entwicklung")
+
+        
     elif Start_S == "N":
         print(Fore.RED + "Schade, dass du nicht bereit bist, wir sehen uns wieder, wenn du es dir anders überlegt hast.", Fore.RESET)
         quit()
