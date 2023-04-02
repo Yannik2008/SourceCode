@@ -56,12 +56,14 @@ if Modus == "S":
             print("Wie aus dem Nichts attackiert er dich.")
             time.sleep(1)
             Wald_GesuchteZahl = random.randint(1, 10)
-            Wald_GesuchteZahl_geraten = ""
-            while Wald_GesuchteZahl_geraten not in Wald_zahl:
-                Wald_GesuchteZahl_geraten = input("Du hast nur eine Chance, errate die gesuchte Zahl von 1 bis 10:")
-                print(Wald_GesuchteZahl)
+            Wald_GesuchteZahl_geraten = int(input("Du hast nur eine Chance, errate die gesuchte Zahl von 1 bis 10:"))
+            while Wald_GesuchteZahl_geraten not in range(1, 11):
+                Wald_GesuchteZahl_geraten = int(input("Du hast nur eine Chance, errate die gesuchte Zahl von 1 bis 10:  "))
             if Wald_GesuchteZahl_geraten == Wald_GesuchteZahl:
                 print("Super gemacht, du hast den Wolf besiegt.") 
+            elif Wald_GesuchteZahl_geraten != Wald_GesuchteZahl:
+                print(f"Tut mir leid, du hast die falsche Zahl genannt. Es war {Wald_GesuchteZahl}. Der Wolf hat dich erlegt. Vielleicht hast du beim nächste Mal mehr Glück.")
+                quit()
         elif Erste_Entscheidung == "Osten":
             print("Noch in der Entwicklung")
         elif Erste_Entscheidung == "Süden":

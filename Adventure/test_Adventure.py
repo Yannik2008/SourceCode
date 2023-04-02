@@ -1,11 +1,8 @@
-S_F = ["S", "F"]
-Modus = ""
-while Modus not in S_F:
-    Modus = input("Wähle bitte einen Spielmodus aus (S/F):   ")
+import random
+Wald_GesuchteZahl = 1
+print(Wald_GesuchteZahl)
+Wald_GesuchteZahl_geraten = int(input(Wald_GesuchteZahl))
 
-if Modus == "S":
-    print("Du hast den Storymodus ausgewählt!")
+if Wald_GesuchteZahl_geraten == Wald_GesuchteZahl:
+    print("Super gemacht, du hast den Wolf besiegt.") 
     
-elif Modus == "F":
-    print("Du hast den Farmmodus ausgewählt!")
-
