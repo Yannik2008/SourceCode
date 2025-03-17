@@ -5,13 +5,16 @@ dice_len = 0
 points = 0
 dice = []
 
-def main():
-    if input("Throw: ") == "y":
+#creates main function 
+def main(): 
+    #input for user whether random 6 dice or own combination
+    if input("Throw: ") == "y": 
         dice = throw_dice(6)
     else:
         dice = dice_input()
     print(dice)
 
+    #creates an infinite loop to execute one round of picking
     while True:
         obj_remove_dice()
         
