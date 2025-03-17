@@ -7,9 +7,9 @@ The topics might vary because of my changing interests and ongoing education.
 
 I try to work on these projects for some amount of time and maybe some of them get their chance and get out of the development phase.
 
-I´m relativ new to programming and try to focus on Python and Java.
+Programming is kind of new to me and therefor I will try to focus on Python and Java.
 
-I´m trying to explore the most fascinating parts of programming with my current skill level. Thi smay result in simple programms or games.
+My mission is set to explore the most fascinating parts of programming with my current skill level. This may result in simple programms or games.
 
 I hope I can inspire you to get to work and build something your own.
 
